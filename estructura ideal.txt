@@ -1,0 +1,34 @@
+mi_proyecto/
+│
+├── env/                  # Carpeta del entorno virtual
+│   ├── bin/              # Archivos ejecutables (Linux/Mac)
+│   ├── Scripts/          # Archivos ejecutables (Windows)
+│   ├── lib/              # Bibliotecas instaladas
+│   └── pyvenv.cfg        # Configuración del entorno virtual
+│
+├── manage.py             # Script principal de Django
+├── mi_proyecto/          # Carpeta principal del proyecto Django
+│   ├── __init__.py       # Marca de paquete Python
+│   ├── settings.py       # Configuración del proyecto
+│   ├── urls.py           # Configuración de rutas
+│   ├── wsgi.py           # Configuración para servidores WSGI
+│   └── asgi.py           # Configuración para servidores ASGI
+│
+├── app/                  # Carpeta de tu aplicación (ejemplo: app principal)
+│   ├── migrations/       # Migraciones de base de datos
+│   ├── __init__.py       # Marca de paquete Python
+│   ├── admin.py          # Configuración del panel de administrador
+│   ├── apps.py           # Configuración de la aplicación
+│   ├── models.py         # Modelos de base de datos
+│   ├── tests.py          # Tests automáticos
+│   └── views.py          # Lógica de las vistas
+│
+├── static/               # Archivos estáticos (CSS, JS, imágenes)
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── templates/            # Plantillas HTML
+│   └── base.html         # Plantilla base (ejemplo)
+│
+└── db.sqlite3            # Base de datos SQLite

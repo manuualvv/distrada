@@ -1,0 +1,371 @@
+/* FONT SIZE SYSTEM: 10-12-14-16-18-20-24-30-36-44-52-62-74-86-98*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Aleo', 'sans-serif';
+}
+
+html {
+  font-size: 62.5%;
+  /* overflow-x: hidden; */
+  /*dont know if this matters really*/
+}
+
+body {
+  background-color: #fff;
+  /* overflow-x: hidden; */
+  /*don't know if this matters really*/
+}
+
+
+/* ///NAVIGATION/// */
+header {
+  background-color: white;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 9rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.8rem;
+  /* margin-bottom: 1rem; */
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 4.8rem;
+}
+
+.nav-logo {
+  width: auto;
+  height: 100%;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  left: 15;
+
+}
+
+.header-nav-link:link,
+.header-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: all 200ms;
+  color: black;
+  border-bottom: 1px solid transparent;
+}
+
+.header-nav-link:hover,
+.header-nav-link:active {
+  border-bottom: 1px solid red;
+}
+
+
+/* /////HERO///// */
+.section-hero {
+  background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* padding: 4.8rem 0; */
+}
+
+.hero {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr 2fr;
+}
+
+.hero-img {
+  max-width: 100%;
+  display: inline-block;
+}
+
+.cell-1 {
+  padding: 0 1rem;
+}
+
+.hero-uppertext {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+  font-size: 1.6rem;
+  color: #fff;
+  background-color: rgb(216, 0, 0);
+  font-weight: 700;
+  padding: 1.2rem 2.4rem;
+  border-radius: 8px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+/* //////////// SECTION PRODUCTS //////////// */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 10px;
+}
+
+.product-link:link,
+.product-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 2rem;
+  letter-spacing: 1.5px;
+  transition: all 200ms;
+  color: black;
+}
+
+.product-link:hover,
+.product-link:active {
+  color: rgb(216, 0, 0);
+}
+
+.product-link:first-child {
+  text-transform: uppercase;
+}
+
+.product-link:nth-child(2) {
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+  margin: 100px 0;
+  /*ajustar luego*/
+}
+
+.slide-content {
+  margin: 0 40px;
+  overflow: hidden;
+  /* background-color: aqua; */
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  align-items: center;
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+  ;
+}
+
+.overlay {
+  position: absolute;
+  /* left: 0; */
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+/* ESQUINA DERECHA CURVA DEL SLIDE */
+.overlay::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: rgb(255, 255, 255);
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #333;
+}
+
+.card {
+  border-radius: 30px 30px 15px 15px;
+  background-color: #333;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 180px;
+}
+
+.card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.swiper-NavBtn {
+  color: rgb(216, 0, 0);
+  transition: color 0.2s ease;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.swiper-NavBtn:hover {
+  color: rgb(134, 4, 4);
+}
+
+.swiper-NavBtn:active {
+  color: rgb(134, 4, 4);
+}
+
+
+.swiper-button-next {
+  right: 0;
+  padding-left: 2.4rem;
+}
+
+.swiper-button-prev {
+  left: 0;
+  padding-right: 2.4rem;
+}
+
+.swiper-container {
+  padding-top: 2.4rem;
+}
+
+.swiper-pagination-bullet-active-main {
+  /* color: rgb(134, 4, 4); */
+  opacity: 1;
+}
+
+@media screen and (max-width: 768) {
+  .slide-content {
+    margin: 0 10px;
+  }
+
+  .swiper-NavBtn {
+    display: none;
+  }
+}
+
+.name {
+  /* NOMBRE DEL SLIDE */
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+}
+
+.description {
+  /* DESCRIPCIÓN DEL SLIDE */
+  font-size: 1.2rem;
+  color: rgb(216, 0, 0);
+}
+
+/* .sale::after {
+  content: "SALE";
+  letter-spacing: 2px;
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  font-size: 1.2rem;
+  background-color: yellow;
+  padding: 1rem 1.5rem;
+  border-radius: 8%;
+} */
+
+
+/* ///////// SECTION COLLECTION //////// */
+
+.section-collection {
+  background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  /* padding: 4.8rem 0; */
+}
+
+.collection {
+  max-width: 130rem;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+}
+
+.col-img {
+  max-width: 100%;
+  display: block;
+}
+
+.col-uppertext {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.col-text {
+  font-size: 2.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.col-cta {
+  background-color: rgb(216, 0, 0);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+}
+
+
+/* FOOT */
+.foot {
+  display: flex;
+  justify-content: space-between;
+  color: grey;
+  background-color: #333;
+  font-size: 1.2rem;
+  padding: 2rem 1.2rem 2rem 1.2rem
+}
+
+/* HEADER (NAV) Y FOOT Y DEMÁS ELEMENTOS COMUNES DEBERÍAN ESTAR EN UN CSS PROPIO */
