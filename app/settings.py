@@ -41,11 +41,13 @@ INSTALLED_APPS = [
     'rest_framework', # AGREGADO
     'django_htmx', # AGREGADO
     'gunicorn', # AGREGADO
+    'whitenoise.runserver_nostatic', # AGREGADO
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -123,11 +125,16 @@ USE_TZ = True
 
 # Configuración de archivos estáticos
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [     # Carpetas donde buscar archivos estáticos
     os.path.join(BASE_DIR, 'distrada/static'),
 ]
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Configuración de archivos multimedia
 MEDIA_URL = '/media/'
