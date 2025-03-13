@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'distrada', # AGREGADO
     'rest_framework', # AGREGADO
     'django_htmx', # AGREGADO
+    'gunicorn', # AGREGADO
 
 ]
 

@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from distrada import views
+from distrada import views # IMPORT DE LAS VISTAS
 from django.conf import settings
 from django.conf.urls.static import static
 
