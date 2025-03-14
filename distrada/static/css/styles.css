@@ -55,7 +55,7 @@ header {
 .header-nav-link:visited {
   display: inline-block;
   text-decoration: none;
-  font-size: 1.8rem;
+  font-size: 2rem;
   transition: all 200ms;
   color: black;
   border-bottom: 1px solid transparent;
@@ -123,7 +123,7 @@ header {
 .product-header {
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 2rem 1rem 3rem 1rem;
 }
 
 .product-link:link,
@@ -151,15 +151,15 @@ header {
 }
 
 .slide-container {
-  max-width: 1120px;
+  max-width: 130rem;
   width: 100%;
-  padding: 40px 0;
-  margin: 100px 0;
+  padding: 4rem 0;
+  margin: 10rem 0;
   /*ajustar luego*/
 }
 
 .slide-content {
-  margin: 0 40px;
+  margin: 0 4rem;
   overflow: hidden;
   /* background-color: aqua; */
 }
@@ -168,14 +168,14 @@ header {
 .card-content {
   display: flex;
   flex-direction: column;
-  padding: 10px 14px;
+  padding: 1rem 1.4rem;
   align-items: center;
 }
 
 .image-content {
   position: relative;
-  row-gap: 5px;
-  padding: 25px 0;
+  row-gap: 0.5rem;
+  padding: 2.5rem 0;
   ;
 }
 

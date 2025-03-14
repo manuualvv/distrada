@@ -1,0 +1,135 @@
+/* 1REM = 1 EM = 16px */
+
+/* A PARTIR DE 1344px [LAPTOPS, PANTALLAS VIEJAS]*/
+@media(max-width: 84em) {
+    header {
+        height: 7rem;
+    }
+
+    .header-nav-link:link,
+    .header-nav-link:visited {
+        font-size: 1.6rem;
+    }
+
+    .hero {
+        max-width: 100rem;
+      }
+
+    /* .hero-uppertext {
+        
+    } */
+    
+    .collection {
+        max-width: 100rem;
+    }
+
+    .product-link:link,
+    .product-link:visited {
+        font-size: 1.6rem;
+    }
+
+    .slide-container {
+        max-width: 100rem;
+    }
+
+    .hero-text {
+        font-size: 2.2rem;
+    }
+
+    .hero-cta {
+        font-size: 1.4rem;
+    }
+}
+
+/* A PARTIR DE 1200px [TABLETS, PANTALLAS MEDIANAS]*/
+@media(max-width: 75em) {
+    header {
+        height: 6rem;
+    }
+
+    .header-nav-link:link,
+    .header-nav-link:visited {
+        font-size: 1.4rem;
+    }
+
+    .hero {
+        max-width: 85rem;
+      }
+    
+    .hero-uppertext {
+        font-size: 1rem;
+    }
+    
+    .collection {
+        max-width: 85rem;
+    }
+
+    .product-link:link,
+    .product-link:visited {
+        font-size: 1.4rem;
+    }
+
+    .slide-container {
+        max-width: 85rem;
+    }
+
+    .hero-text {
+        font-size: 1.8rem;
+    }
+
+    .hero-cta {
+        font-size: 1.2rem;
+    }
+}
+
+/* A PARTIR DE 944PX (TABLETS, PANTALLAS PEQUEÑAS) */
+@media(max-width: 59em) {
+    header {
+        height: 5rem;
+    }
+
+    .header-nav-link:link,
+    .header-nav-link:visited {
+        font-size: 1.2rem;
+    }
+
+    .hero {
+        max-width: 70rem;
+      }
+    
+    .collection {
+        max-width: 70rem;
+    }
+
+    .product-link:link,
+    .product-link:visited {
+        font-size: 1.2rem;
+    }
+
+    .slide-container {
+        max-width: 70rem;
+    }
+
+    .hero-uppertext{
+
+    }
+
+    .hero-text {
+        font-size: 1.4rem;
+    }
+
+    .hero-cta {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+    }
+}
+
+/* A PARTIR DE 704PX (704/16=44em) [tablets pequeñas] */
+@media(max-width: 44em) {
+
+}
+
+/* CELULARES 544px */
+@media (max-width: 34em) {
+
+}
