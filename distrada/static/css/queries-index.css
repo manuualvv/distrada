@@ -2,6 +2,7 @@
 
 /* A PARTIR DE 1344px [LAPTOPS, PANTALLAS VIEJAS]*/
 @media(max-width: 84em) {
+    /* NAVIGATION */
     header {
         height: 7rem;
     }
@@ -11,16 +12,27 @@
         font-size: 1.6rem;
     }
 
+    /* HERO */
     .hero {
         max-width: 100rem;
-      }
+    }
 
-    /* .hero-uppertext {
-        
-    } */
-    
-    .collection {
-        max-width: 100rem;
+    .hero-uppertext {
+        font-size: 1rem;
+    }
+
+    .hero-text {
+        font-size: 2.2rem;
+    }
+
+    .hero-cta {
+        font-size: 1.4rem;
+        padding: 1rem 2.2rem;
+    }
+
+    /* PRODUCTS */
+    .product-header {
+        padding: 2rem 2rem 3rem 2rem;
     }
 
     .product-link:link,
@@ -32,17 +44,31 @@
         max-width: 100rem;
     }
 
-    .hero-text {
+    /* COLLECTION */
+    .collection {
+        max-width: 100rem;
+    }
+
+    .col-uppertext {
+        font-size: 1rem;
+    }
+
+    .col-text {
         font-size: 2.2rem;
     }
 
-    .hero-cta {
-        font-size: 1.4rem;
-    }
+    /* .col-cta {
+        
+    } */
+
+    
+
+    
 }
 
 /* A PARTIR DE 1200px [TABLETS, PANTALLAS MEDIANAS]*/
 @media(max-width: 75em) {
+    /* NAVIGATION */
     header {
         height: 6rem;
     }
@@ -52,18 +78,25 @@
         font-size: 1.4rem;
     }
 
+    /* HERO */
     .hero {
         max-width: 85rem;
-      }
+    }
     
     .hero-uppertext {
         font-size: 1rem;
     }
-    
-    .collection {
-        max-width: 85rem;
+
+    .hero-text {
+        font-size: 1.8rem;
     }
 
+    .hero-cta {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
+    }
+    
+    /* PRODUCTS */
     .product-link:link,
     .product-link:visited {
         font-size: 1.4rem;
@@ -73,17 +106,30 @@
         max-width: 85rem;
     }
 
-    .hero-text {
+    /* COLLECTION */
+    .collection {
+        max-width: 85rem;
+    }
+
+    .col-uppertext {
+        font-size: 0.8rem; /* EXC */
+    }
+
+    .col-text {
         font-size: 1.8rem;
     }
 
-    .hero-cta {
-        font-size: 1.2rem;
+    .col-cta {
+        font-size: 1.1rem;
+        padding: 0.8rem 2rem;
     }
+
+    
 }
 
 /* A PARTIR DE 944PX (TABLETS, PANTALLAS PEQUEÑAS) */
 @media(max-width: 59em) {
+    /* NAVIGATION */
     header {
         height: 5rem;
     }
@@ -93,14 +139,26 @@
         font-size: 1.2rem;
     }
 
+    /* HERO */
     .hero {
-        max-width: 70rem;
-      }
-    
-    .collection {
         max-width: 70rem;
     }
 
+    .hero-uppertext {
+        font-size: 0.8rem;
+    }
+
+    .hero-text {
+        font-size: 1.4rem;
+    }
+
+    .hero-cta {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+        border-radius: 6px;
+    }
+
+    /* PRODUCTS */
     .product-link:link,
     .product-link:visited {
         font-size: 1.2rem;
@@ -110,18 +168,25 @@
         max-width: 70rem;
     }
 
-    .hero-uppertext{
-
+    /* COLLECTION */
+    .collection {
+        max-width: 70rem;
     }
 
-    .hero-text {
+    .col-uppertext {
+        font-size: 0.8rem;
+    }
+
+    .col-text {
         font-size: 1.4rem;
     }
 
-    .hero-cta {
-        font-size: 1rem;
-        padding: 1rem 2rem;
+    .col-cta {
+        font-size: 0.9rem;
+        padding: 0.7rem 1.5rem;
+        border-radius: 6px;
     }
+    
 }
 
 /* A PARTIR DE 704PX (704/16=44em) [tablets pequeñas] */
