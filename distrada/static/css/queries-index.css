@@ -44,6 +44,16 @@
         max-width: 100rem;
     }
 
+    .name {
+        font-size: 1.4rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+
+
     /* COLLECTION */
     .collection {
         max-width: 100rem;
@@ -104,6 +114,14 @@
 
     .slide-container {
         max-width: 85rem;
+    }
+
+    .name {
+        font-size: 1.3rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
     }
 
     /* COLLECTION */
@@ -167,6 +185,15 @@
     .slide-container {
         max-width: 70rem;
     }
+
+    .name {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.8rem;
+    }
+
 
     /* COLLECTION */
     .collection {
