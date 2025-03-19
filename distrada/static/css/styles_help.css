@@ -1,0 +1,18 @@
+/* FONT SIZE SYSTEM: 10-12-14-16-18-20-24-30-36-44-52-62-74-86-98*/
+/* ||||||||||||||||||| CONTAINER 1 ||||||||||||||||||| */
+.ayuda {
+  display: grid;
+  height: 100rem;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 140rem;
+  /* gap: 5rem; */
+}
+
+.celda-1 {
+  background-color: rgb(189, 122, 122);
+}
+
+.celda-2 {
+  background-color: rgb(93, 163, 93);
+}

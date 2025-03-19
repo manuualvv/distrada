@@ -20,6 +20,9 @@ def lista_productos_grid(request):
         productos = Producto.objects.all().order_by('-precio')
         
     return render(request, 'products_list.html', {'productos': productos})
+
+def help(request):
+    return render(request, 'help.html')
     
     
    
