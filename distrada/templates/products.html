@@ -1,75 +1,67 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- ||||||||||||||||||| LINKS ||||||||||||||||||| -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles_general.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles_products.css' %}" />
+    <title>Di Strada</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- ||||||||||||||||||| LINKS ||||||||||||||||||| -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="{% static 'css/styles2.css' %}" />
-  <title>Di Strada</title>
-</head>
+  <body>
+    <!-- ||||||||||||||||||| NAVIGATION ||||||||||||||||||| -->
+    {% include 'nav.html' %}
 
-
-<body>
-
-  <!-- ||||||||||||||||||| NAVIGATION ||||||||||||||||||| -->
-  <header>
-    <a href="/">
-      <img class="nav-logo" src="{% static 'img/nav-logo-2.png' %}" />
-    </a>
-    <ul class="header-nav">
-      <a class="header-nav-link" href="#">Colecciones</a>
-      <a class="header-nav-link" href="/products/">Tienda</a>
-      <a class="header-nav-link" href="#">Ayuda</a>
-    </ul>
-  </header>
-
-  <!-- ||||||||||||||||||| FILTROS ||||||||||||||||||| -->
-  <div class="filter-section">
-
-    <div class="collapsible" id="toggle-filters">
-      <label for="collapsible-head" class="filter-text">FILTROS</label>
-      <label for="collapsible-head" class="filter-icon-label">
-        <img for="collapsible-head" class="filter-icon" src="{% static 'img/filter-display.jpg' %}">
-      </label>
-    </div>
-
-    <div class="collapsible-block">
-
-      <div class="filter-div">
-        <button type="button" class="order-btn" data-url="{% url 'lista_productos_grid' %}?orden=asc">
-          Ordenar por Precio: Menor a Mayor
-        </button>
-        <button type="button" class="order-btn" data-url="{% url 'lista_productos_grid' %}?orden=desc">
-          Ordenar por Precio: Mayor a Menor
-        </button>
+    <!-- ||||||||||||||||||| FILTROS ||||||||||||||||||| -->
+    <div class="filter-section">
+      <div class="collapsible" id="toggle-filters">
+        <label for="collapsible-head" class="filter-text">FILTROS</label>
+        <label for="collapsible-head" class="filter-icon-label">
+          <img
+            for="collapsible-head"
+            class="filter-icon"
+            src="{% static 'img/filter-display.jpg' %}"
+          />
+        </label>
       </div>
 
-    </div>
-
-    <!-- ||||||||||||||||||| PRODUCTOS ||||||||||||||||||| -->
-    <div class="container_general">
-
-      <div class="container_products">
-        {% include "products_list.html" %}
+      <div class="collapsible-block">
+        <div class="filter-div">
+          <button
+            type="button"
+            class="order-btn"
+            data-url="{% url 'lista_productos_grid' %}?orden=asc"
+          >
+            Ordenar por Precio: Menor a Mayor
+          </button>
+          <button
+            type="button"
+            class="order-btn"
+            data-url="{% url 'lista_productos_grid' %}?orden=desc"
+          >
+            Ordenar por Precio: Mayor a Menor
+          </button>
+        </div>
       </div>
 
+      <!-- ||||||||||||||||||| PRODUCTOS ||||||||||||||||||| -->
+      <div class="container_general">
+        <div class="container_products">{% include "products_list.html" %}</div>
+      </div>
+
+      <!-- ||||||||||||||||||| FOOTER ||||||||||||||||||| -->
+      {% include 'foot.html' %}
     </div>
 
-    <div class="foot">
-      <h2>CONTACTO</h2>
-      <h2>example@correo.ar</h2>
-    </div>
-
-  </div>
-
-  <script src="{% static 'js/script2.js' %}"></script>
-</body>
-
+    <script src="{% static 'js/script2.js' %}"></script>
+  </body>
 </html>
