@@ -62,18 +62,38 @@ header {
   border-bottom: 1px solid red;
 }
 
+.carro {
+  color: black; /* NO SE USA */
+}
+
+.carro-logo {
+  display: block;
+  width: 3rem;
+  height: auto;
+}
+
 /* ||||||||||||||||||| FOOTER ||||||||||||||||||| */
 .foot {
   max-height: 15rem;
   display: flex;
   justify-content: space-between;
-  color: grey;
+  color: #d5d5d5;
   background-color: #333;
   padding: 2rem 1.2rem 2rem 1.2rem;
 }
 
+.foot-img {
+  display: block;
+  width: 7rem;
+  height: auto;
+}
+
+.foot h2 {
+  align-content: center;
+}
+
 .contacto {
-  background-color: #f1f1f1;
+  /* background-color: #f1f1f1; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -85,8 +105,8 @@ header {
   cursor: pointer;
 }
 
-.contacto img {
+.media-logo {
   display: block;
-  width: 4rem;
+  width: 3rem;
   height: auto;
 }

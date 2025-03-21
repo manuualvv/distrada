@@ -63,6 +63,63 @@
   color: white;
 }
 
+/* ||||||||||||||||||| SECTION COLLECTION ||||||||||||||||||| */
+.section-collection {
+  background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  justify-items: center;
+  /* padding: 4.8rem 0; */
+}
+
+.cell-1 {
+  margin: 0 auto;
+}
+
+.cell-img {
+  align-self: stretch; /* OCUPA TODA LA CELDA */
+  overflow: hidden;
+}
+
+.col-img {
+  height: 100%;
+  width: auto;
+  display: block;
+  justify-self: center;
+}
+
+.collection {
+  max-width: 100%;
+  height: 90.6vh;
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.col-uppertext {
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
+}
+
+.col-text {
+  font-size: 2.5rem;
+  margin: 1rem 0 1.5rem 0;
+}
+
+.col-cta {
+  font-size: 1.6rem;
+  padding: 1.2rem 2.4rem;
+  background-color: rgb(216, 0, 0);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+}
+
 /* ||||||||||||||||||| SECTION PRODUCTS ||||||||||||||||||| */
 .product-header {
   display: flex;
@@ -249,61 +306,3 @@
   padding: 1rem 1.5rem;
   border-radius: 8%;
 } */
-
-/* ||||||||||||||||||| SECTION COLLECTION ||||||||||||||||||| */
-.section-collection {
-  background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  justify-items: center;
-  /* padding: 4.8rem 0; */
-}
-
-.cell-1 {
-  margin: 0 auto;
-}
-
-.cell-img {
-  align-self: stretch; /* OCUPA TODA LA CELDA */
-  overflow: hidden;
-}
-
-.col-img {
-  /* width: 100%; */
-  height: 100%;
-  width: auto;
-  object-fit: cover;
-  /* display: block; */
-}
-
-.collection {
-  max-width: 100%;
-  height: 90.6vh;
-  display: grid;
-  align-items: center;
-  justify-content: space-between;
-  grid-template-columns: 1fr 1fr 1fr;
-}
-
-.col-uppertext {
-  color: #333;
-  text-transform: uppercase;
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 4px;
-}
-
-.col-text {
-  font-size: 2.5rem;
-  margin: 1rem 0 1.5rem 0;
-}
-
-.col-cta {
-  font-size: 1.6rem;
-  padding: 1.2rem 2.4rem;
-  background-color: rgb(216, 0, 0);
-  color: #fff;
-  font-weight: 700;
-  text-transform: uppercase;
-  border: none;
-  border-radius: 8px;
-}
