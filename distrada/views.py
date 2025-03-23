@@ -8,8 +8,7 @@ def index(request):
     productos = Producto.objects.all()
 
     # Ruta absoluta a la carpeta de imágenes en static
-    images_path = os.path.join(settings.BASE_DIR, 'static', 'img', 'slider-big')
-    
+    images_path = os.path.join(settings.BASE_DIR, 'distrada', 'static', 'img', 'slider_big')
     if not os.path.exists(images_path):
         # Puedes manejar el error, por ejemplo, devolviendo una lista vacía o mostrando un mensaje
         images = []
@@ -17,7 +16,7 @@ def index(request):
     # Lista de archivos en la carpeta (puedes filtrar por extensión, si lo deseas)
     images = [f for f in os.listdir(images_path) if f.endswith(('.png', '.jpg', '.jpeg', '.gif'))]
     # Puedes construir la ruta relativa para usarlas en el template:
-    images = [os.path.join('img/slider-big', f) for f in images]
+    images = [os.path.join('img/slider_big', f) for f in images]
 
 
     return render(request, 'index.html', {'productos': productos, 'images': images,})

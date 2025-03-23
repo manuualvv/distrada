@@ -45,7 +45,35 @@
     <!-- ||||||||||||||||||| COLLECTION 1 ||||||||||||||||||| -->
     <section class="section-collection">
       <div class="collection">
-        <div class="cell-1">
+        <div class="card-wrapper swiper-wrapper">
+          {% for image in images %}
+
+          <!-- INICIO SLIDES-->
+          <!-- DEBE HABER AL MENOS 6 PRODUCTOS EN LA BD-->
+          <div class="card swiper-slide">
+            <!-- CONTAINER MOVIBLE-->
+            <div class="slide-big">
+              <img
+                class="slide-img"
+                src="{% static image %}"
+                alt="Imagen {{ forloop.counter }}"
+              />
+            </div>
+            <div class="card-content">
+              <a href="#" class="name">{{ producto.nombre }}</a>
+              <p class="description">{{ producto.precio }}</p>
+            </div>
+          </div>
+          <!-- FIN CONTAINER MOVIBLE-->
+
+          {% empty %}
+          <p>ERROR EN SLIDES</p>
+          {% endfor %}
+
+          <!--  FIN SLIDES -->
+        </div>
+
+        <!-- <div class="cell-1">
           <p class="col-uppertext">COLECCIÓN DE INVIERNO</p>
           <p class="col-text">Conoce a nuestros modelos</p>
           <button class="col-cta">VER MÁS</button>
@@ -57,7 +85,7 @@
 
         <div class="cell-img hidden">
           <img class="col-img" src="{% static 'img/martos-1.jpg' %}" />
-        </div>
+        </div> -->
       </div>
     </section>
 
