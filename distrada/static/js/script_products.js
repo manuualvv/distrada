@@ -45,17 +45,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // CERRAR VENTANA MODAL
 document.addEventListener("DOMContentLoaded", function () {
+  // SELECCIÓN DE ITEMS
   const productCard = document.querySelector(".product_card");
   const productCloseBtn = document.querySelector(".product_closebtn");
   const productos = document.querySelectorAll(".producto");
+  const overlay = document.querySelector(".overlay");
 
+  // ITERACIÓN EN CADA PRODUCTO
   productos.forEach((producto) => {
     producto.addEventListener("click", function () {
       productCard.classList.remove("hidden");
+      overlay.classList.remove("hidden");
     });
   });
 
-  productCloseBtn.addEventListener("click", function () {
+  // OCULTAR MODAL
+  const hideModal = function () {
     productCard.classList.add("hidden");
-  });
+    overlay.classList.add("hidden");
+  };
+  productCloseBtn.addEventListener("click", hideModal);
+  overlay.addEventListener("click", hideModal);
 });
