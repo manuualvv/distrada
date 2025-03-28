@@ -1,16 +1,17 @@
-<section class="productos-grid"> <!-- GRILLA DE PRODUCTOS-->
+<section class="productos-grid">
+  <!-- GRILLA DE PRODUCTOS-->
 
-    {% for producto in productos %} <!-- APLICA UN ARTICLE A C/PROD DE LA DATABASE-->
+  {% for producto in productos %}
+  <!-- APLICA UN ARTICLE A C/PROD DE LA DATABASE-->
 
-    <article class="producto">
-        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}">
-        <h2>{{ producto.nombre }}</h2>
-        <!-- <p>{{ producto.descripcion }}</p> NO ES REFERENCIADO-->
-        <p>${{ producto.precio }}</p>
-    </article>
+  <article class="producto">
+    <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" />
+    <h2>{{ producto.nombre }}</h2>
+    <!-- <p>{{ producto.descripcion }}</p> NO ES REFERENCIADO-->
+    <p>${{ producto.precio }}</p>
+  </article>
 
-    {% empty %}
-    <p>No hay productos disponibles.</p>
-    {% endfor %}
-
+  {% empty %}
+  <p>No hay productos disponibles.</p>
+  {% endfor %}
 </section>

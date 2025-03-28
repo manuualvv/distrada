@@ -1,27 +1,25 @@
 {% load static %}
 <article class="product_card">
-    <button class="product_closebtn">&times;</button>
-    <div class="product_img">
-        <img class='product_img_real' src="{% static 'img/shirt-black.png' %}" />
+  <button class="product_closebtn">&times;</button>
+  <div class="product_img">
+    <img class="product_img_real" src="{% static 'img/shirt-black.png' %}" />
+  </div>
+  <div class="product_info">
+    <div class="product_title">Remera DISTRADA Negra</div>
+    <div class="product_desc">100% algodón</div>
+    <div class="product_price">$ 9999</div>
+    <p class="product_uppertext">COLOR</p>
+    <div class="product_colors">
+      <button class="product_btn selected">Negro</button>
+      <button class="product_btn">Rojo</button>
+      <button class="product_btn">Gris</button>
     </div>
-    <div class="product_info">
-        <div class="product_title">Remera Distrada Negra</div>
-        <div class="product_desc">100% algodón</div>
-        <div class="product_price_container">
-            <div class="product_price_text">PRECIO</div>
-            <div class="product_price_number">$ 9999</div>
-        </div>
-        <div class="product_colors">
-            <button class="product_color selected">NEGRO</button>
-            <button class="product_color">ROJO</button>
-            <button class="product_color">GRIS</button>
-        </div>
-        <div class="product_sizes">
-            <button class="product_size selected">S</button>
-            <button class="product_size">M</button>
-            <button class="product_size">L</button>
-        </div>
-        <button class="product_cta">AÑADIR AL CARRITO</button>
-
+    <p class="product_uppertext">TALLES</p>
+    <div class="product_sizes">
+      <button class="product_btn selected">S</button>
+      <button class="product_btn">M</button>
+      <button class="product_btn">L</button>
     </div>
+    <button class="product_cta">AÑADIR AL CARRITO</button>
+  </div>
 </article>
