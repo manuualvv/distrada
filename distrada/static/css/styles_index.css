@@ -76,7 +76,8 @@
 }
 
 .cell-img {
-  align-self: stretch; /* OCUPA TODA LA CELDA */
+  align-self: stretch;
+  /* OCUPA TODA LA CELDA */
   overflow: hidden;
 }
 

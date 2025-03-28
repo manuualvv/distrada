@@ -110,11 +110,6 @@
 }
 
 .producto {
-  /* display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center; */
-
   max-width: 32rem;
   height: auto;
   background: white;
@@ -143,4 +138,112 @@
 .producto:hover {
   transform: scale(1.05);
   border-color: #555;
+}
+
+/* ||||||||||||||||||| MODAL_WINDOW ||||||||||||||||||| */
+.selected {
+  border: 2px solid red;
+}
+
+.product_card {
+  width: 60rem;
+  height: 50rem;
+  background-color: aquamarine;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  box-shadow: 0 5px 2rem black;
+}
+
+.product_img {
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+  align-self: stretch;
+}
+
+.product_img_real {
+  height: auto;
+  width: 100%;
+  display: block;
+}
+
+
+.product_info {
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  padding: 2rem;
+}
+
+.product_title {
+  margin: 5rem 0 1rem 0;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.product_desc {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 7rem;
+}
+
+.product_price_container {
+  margin-bottom: 8rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.product_price_text {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.product_price_number {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.product_colors {
+  margin-bottom: 6rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.product_sizes {
+  display: flex;
+  gap: 2rem;
+}
+
+.product_cta {
+  margin-top: auto;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  color: #fff;
+  background-color: rgb(216, 0, 0);
+  font-weight: 700;
+  border-radius: 6px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: auto;
+  align-self: center;
+}
+
+
+.product_closebtn {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: yellow;
 }
