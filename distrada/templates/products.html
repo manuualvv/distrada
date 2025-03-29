@@ -33,34 +33,36 @@
           />
         </label>
       </div>
-
-      <div class="collapsible-block">
-        <div class="filter-div">
-          <button
-            type="button"
-            class="order-btn"
-            data-url="{% url 'lista_productos_grid' %}?orden=asc"
-          >
-            Ordenar por Precio: Menor a Mayor
-          </button>
-          <button
-            type="button"
-            class="order-btn"
-            data-url="{% url 'lista_productos_grid' %}?orden=desc"
-          >
-            Ordenar por Precio: Mayor a Menor
-          </button>
+      <div class="debug1">
+        <div class="collapsible-block">
+          <div class="filter-div">
+            <button
+              type="button"
+              class="order-btn"
+              data-url="{% url 'lista_productos_grid' %}?orden=asc"
+            >
+              Ordenar por Precio: Menor a Mayor
+            </button>
+            <button
+              type="button"
+              class="order-btn"
+              data-url="{% url 'lista_productos_grid' %}?orden=desc"
+            >
+              Ordenar por Precio: Mayor a Menor
+            </button>
+          </div>
         </div>
+
+        <!-- ||||||||||||||||||| PRODUCTOS ||||||||||||||||||| -->
+        <div class="container_general">
+          <div class="container_products">
+            {% include "products_list.html" %}
+          </div>
+        </div>
+
+        <!-- ||||||||||||||||||| PRODUCTOS_MODAL ||||||||||||||||||| -->
+        {% include 'product_card.html' %}
       </div>
-
-      <!-- ||||||||||||||||||| PRODUCTOS ||||||||||||||||||| -->
-      <div class="container_general">
-        <div class="container_products">{% include "products_list.html" %}</div>
-      </div>
-
-      <!-- ||||||||||||||||||| PRODUCTOS_MODAL ||||||||||||||||||| -->
-      {% include 'product_card.html' %}
-
       <!-- ||||||||||||||||||| FOOTER ||||||||||||||||||| -->
       {% include 'foot.html' %}
     </div>

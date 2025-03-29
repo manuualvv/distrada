@@ -80,7 +80,7 @@
 
           <!-- INICIO SLIDES-->
           <!-- DEBE HABER AL MENOS 6 PRODUCTOS EN LA BD-->
-          <div class="card swiper-slide">
+          <article class="card swiper-slide">
             <!-- CONTAINER MOVIBLE-->
             <div class="image-content">
               <span class="overlay"></span>
@@ -96,7 +96,7 @@
               <a href="#" class="name">{{ producto.nombre }}</a>
               <p class="description">{{ producto.precio }}</p>
             </div>
-          </div>
+          </article>
           <!-- FIN CONTAINER MOVIBLE-->
 
           {% empty %}
@@ -118,6 +118,8 @@
     <!-- ||||||||||||||||||| FOOTER ||||||||||||||||||| -->
     {% include 'foot.html' %}
 
+
+    <div class="white-"></script>
     <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
     <script src="{% static 'js/script_index.js' %}"></script>
   </body>
