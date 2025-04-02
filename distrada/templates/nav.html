@@ -6,8 +6,10 @@
   <ul class="header-nav">
     <a class="header-nav-link" href="/products/">Productos</a>
     <a class="header-nav-link" href="/help/">Ayuda</a>
-    <li class="carro" href="#">
+    <div class="carro">
       <img class="carro-logo" src="{% static 'img/carro-logo.png' %}" />
-    </li>
+    </div>
   </ul>
 </header>
+
+{% include 'carrito.html' %}

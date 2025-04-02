@@ -69,19 +69,24 @@
   top: 0;
 }
 
-.filter-list {
+.filter-div {
   display: flex;
-  list-style: none;
   justify-content: center;
   align-items: center;
   gap: 3.2rem;
-  text-transform: uppercase;
 }
 
-.filter-list button {
-  font-size: 1.6rem;
-  color: #333;
+.order-btn {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  background-color: rgb(216, 0, 0);
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 6px;
 }
+
 
 /* ||||||||||||||||||| PRODUCTS ||||||||||||||||||| */
 .container_general {

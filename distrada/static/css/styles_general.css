@@ -19,28 +19,7 @@ body {
 }
 
 /* ||||||||||||||||||| TRANSITIONS ||||||||||||||||||| */
-/* INUTILIZADO */
-/* .hidden {
-  opacity: 0;
-  filter: blur(10px);
-  transform: translateX(5rem);
-  transform: scale(0.8);
-  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1); */
-/* transition: opacity 0.3s ease-out, transform 0.3s ease-out; */
-/* } */
 
-/* @media (prefers-reduced-motion) {
-  .hidden {
-    transition: none;
-  }
-} */
-
-/* .show {
-  opacity: 1;
-  filter: blur(0);
-  transform: scale(1);
-  transform: translateX(0);
-} */
 
 /* ||||||||||||||||||| NAVIGATION ||||||||||||||||||| */
 header {
@@ -88,8 +67,8 @@ header {
 }
 
 .carro {
-  color: black;
-  /* NO SE USA */
+  background-color: white;
+  cursor: pointer;
 }
 
 .carro-logo {
@@ -135,4 +114,54 @@ header {
   display: block;
   width: 3rem;
   height: auto;
+}
+
+/* ||||||||||||||||||| CART ||||||||||||||||||| */
+.cart-modal.hidden {
+  display: none;
+}
+
+.cart-modal {
+  padding: 1rem;
+  width: 35rem;
+  height: 20rem;
+  background-color: gold;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cart-item {
+  margin-bottom: 10rem;
+  /* EDITAR DESPUÉS */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-item-img {
+  background-color: red;
+}
+
+.cart-item-img img {
+  display: block;
+  width: 5rem;
+  height: auto;
+}
+
+.cart-item-info {
+  display: flex;
+  gap: 2rem;
+  padding: 0.5rem;
+}
+
+/* .cart-col {
+  margin-bottom: 1rem;
+} */
+
+.cart-modal-foot {
+  display: flex;
+  background-color: white;
+  padding: 1rem;
 }
