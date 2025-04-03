@@ -43,3 +43,19 @@ var swiper = new Swiper(".slide-content", {
 // });
 // const hiddenElements = document.querySelectorAll(".hidden");
 // hiddenElements.forEach((el) => observer.observe(el));
+
+document.addEventListener("DOMContentLoaded", function () {
+  // SELECCIÓN DE ITEMS
+  const productCard = document.querySelector(".product_card");
+  const productCloseBtn = document.querySelector(".product_closebtn");
+  const container_products = document.querySelectorAll(".card");
+  const overlay = document.querySelector(".overlay");
+
+  // ITERACIÓN EN CADA PRODUCTO
+  container_products.forEach((card) => {
+    card.addEventListener("click", function () {
+      productCard.classList.toggle("hidden");
+      overlay.classList.toggle("hidden");
+    });
+  });
+});

@@ -39,18 +39,20 @@
         <div class="filter-div">
           <button
             type="button"
-            class="order-btn"
-            data-url="{% url 'lista_productos_grid' %}?orden=asc"
+            class="order-btn order-btn-price"
+            data-asc-url="{% url 'lista_productos_grid' %}?orden=asc"
+            data-desc-url="{% url 'lista_productos_grid' %}?orden=desc"
           >
-            Ordenar por Precio: Menor a Mayor
+            Ordenar por Precio: Mayor a menor
           </button>
-          <button
+          <button class="order-btn">ORDENAR POR COLECCIÓN</button>
+          <!-- <button
             type="button"
             class="order-btn"
             data-url="{% url 'lista_productos_grid' %}?orden=desc"
           >
             Ordenar por Precio: Mayor a Menor
-          </button>
+          </button> -->
         </div>
       </div>
 
@@ -58,14 +60,13 @@
       <div class="container_general">
         <div class="container_products">{% include "products_list.html" %}</div>
       </div>
-
-      <!-- ||||||||||||||||||| PRODUCTOS_MODAL ||||||||||||||||||| -->
-      {% include 'product_card.html' %}
     </div>
     <!-- Fin div overlay -->
     <!-- ||||||||||||||||||| FOOTER ||||||||||||||||||| -->
     {% include 'foot.html' %}
-    <div class="overlay hidden"></div>
+    <div class="overlay_modal hidden"></div>
+    <!-- ||||||||||||||||||| PRODUCTOS_MODAL ||||||||||||||||||| -->
+    {% include 'product_card.html' %}
 
     <script src="{% static 'js/script_products.js' %}"></script>
   </body>

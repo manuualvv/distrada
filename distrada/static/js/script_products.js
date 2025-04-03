@@ -10,9 +10,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // 2. Funcionalidad para actualizar los productos
   // Seleccionamos todos los botones de ordenamiento (deben tener la clase "order-btn")
-  const orderButtons = document.querySelectorAll(".order-btn");
+  const orderButton = document.querySelector(".order-btn-price");
   // Seleccionamos el contenedor donde se muestran los productos.
   const container = document.querySelector(".container_products");
+
+  // Ordering boolean
+  let ascending = false;
+
+  // Ordering urls
+  const ascUrl = orderButton.getAttribute("data-asc-url");
+  const descUrl = orderButton.getAttribute("data-desc-url");
 
   // Función para realizar la petición fetch.
   function fetchOrderedProducts(url) {
@@ -34,12 +41,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Asignamos el evento click a cada botón.
-  orderButtons.forEach((btn) => {
-    btn.addEventListener("click", function (e) {
-      e.preventDefault(); // Prevenir cualquier comportamiento por defecto
-      const url = btn.getAttribute("data-url");
-      fetchOrderedProducts(url);
-    });
+  orderButton.addEventListener("click", function (e) {
+    e.preventDefault();
+    const url = ascending ? ascUrl : descUrl;
+    fetchOrderedProducts(url);
+    if (ascending) {
+      orderButton.textContent = "Ordenar por precio: mayor a menor";
+    } else {
+      orderButton.textContent = "Ordenar por precio: menor a mayor";
+    }
+
+    // Boolean trigger
+    ascending = !ascending;
   });
 });
 
@@ -49,21 +62,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const productCard = document.querySelector(".product_card");
   const productCloseBtn = document.querySelector(".product_closebtn");
   const productos = document.querySelectorAll(".producto");
-  const overlay = document.querySelector(".overlay");
+  const overlayModal = document.querySelector(".overlay_modal");
 
   // ITERACIÓN EN CADA PRODUCTO
   productos.forEach((producto) => {
     producto.addEventListener("click", function () {
       productCard.classList.remove("hidden");
-      overlay.classList.remove("hidden");
+      overlayModal.classList.remove("hidden");
     });
   });
 
   // OCULTAR MODAL
   const hideModal = function () {
     productCard.classList.add("hidden");
-    overlay.classList.add("hidden");
+    overlayModal.classList.add("hidden");
   };
   productCloseBtn.addEventListener("click", hideModal);
-  overlay.addEventListener("click", hideModal);
+  overlayModal.addEventListener("click", hideModal);
 });
