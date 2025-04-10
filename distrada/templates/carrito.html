@@ -1,19 +1,37 @@
 {% load static %}
 <div class="cart-modal hidden">
-  <div class="cart-item">
-    <div class="cart-item-img">
-      <img src="{% static 'img/shirt-grey.png' %}" />
-    </div>
-    <div class="cart-item-info">
-      <div class="cart-col cart-price">
-        <p>Precio</p>
-        <p>$9999</p>
-      </div>
-      <div class="cart-col cart-quantity">
-        <p>Cantidad</p>
-        <p>5</p>
-      </div>
+
+  <div class="cart-header-item">
+    <p>Productos</p>
+    <div class="cart-header-right">
+      <p>Precio</p>
+      <p>Cantidad</p>
     </div>
   </div>
+
+
+  <div class="cart-item">
+
+    <div class="cart-container-left">
+      <div class="cart-item-img">
+        <img src="{% static 'img/shirt-grey.png' %}" />
+      </div>
+      <p>Nombre del producto</p> <!-- producto.nombre aquí-->
+    </div>
+
+    <div class="cart-item-info">
+      <div class="cart-col">
+        <p>$9999</p>
+        <div class="cart-sum-btn">
+          <p>5</p>
+          <div class="quantity-upper">1+</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
   <div class="cart-modal-foot">PIE DE CONTENIDO</div>
+
 </div>
