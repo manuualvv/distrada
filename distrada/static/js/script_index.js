@@ -72,22 +72,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const heroImg = document.querySelector(".hero-img"); // PROBANDO
 
   // ||| CHANGE_STYLE ||| ON CLICK
-  let actualStyle = 0;
   changeStyleBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
-      if (actualStyle === 0) {
+      if (btn.classList.contains("btn--1")) {
+        console.log("DEBUG BOTON 1");
         heroSection.style.backgroundImage =
           "linear-gradient( #f1f1f1, rgb(107, 30, 30))";
-        heroText1.textContent = "Una nueva colección está llegando a Strada"; // PROBANDO
+        heroText1.textContent = "Colección de remeras SR"; // PROBANDO
         heroImg.src = heroImg.dataset.lucas;
-        actualStyle = 1;
+      } else if (btn.classList.contains("btn--2")) {
+        console.log("DEBUG BOTON 2");
+        heroSection.style.backgroundImage =
+          "linear-gradient(rgb(123, 165, 241), #356d9b)";
+        heroText1.textContent = "Colección de remeras SR"; // PROBANDO
+        heroImg.src = heroImg.dataset.manu;
       } else {
+        console.log("DEBUG BOTON 3");
         heroSection.style.backgroundImage =
           "linear-gradient(rgb(255, 255, 255), #f1f1f1)";
         heroText1.textContent = "Tenemos una nueva colección para ustedes"; // PROBANDO
         heroImg.src = "{% static 'img/hero-martos.png' %}";
         heroImg.src = heroImg.dataset.martos;
-        actualStyle = 0;
       }
       // PARA CADA COLOR (ESTILO), CREAR UNA CLASE Y JUGAR CON LOS ESTILOS
     });
