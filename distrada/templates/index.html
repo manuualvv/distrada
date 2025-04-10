@@ -1,129 +1,148 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'css/styles_general.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/styles_index.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/queries-index.css' %}" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="{% static 'css/styles_general.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/styles_index.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/queries-index.css' %}" />
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="{% static 'css/swiper-bundle.min.css' %}" />
+    <title>Di Strada</title>
+  </head>
 
-  <title>Di Strada</title>
-</head>
+  <body>
+    <!-- ||||||||||||||||||| NAVIGATION ||||||||||||||||||| -->
+    {% include 'nav.html' %}
 
-<body>
-  <!-- ||||||||||||||||||| NAVIGATION ||||||||||||||||||| -->
-  {% include 'nav.html' %}
+    <!-- ||||||||||||||||||| HERO ||||||||||||||||||| -->
 
-  <!-- ||||||||||||||||||| HERO ||||||||||||||||||| -->
-
-  <section class="section-hero">
-    <div class="hero">
-      <div class="cell-1">
-        <p class="hero-uppertext">DI STRADA 2025</p>
-        <p class="hero-text">Tenemos una nueva colección para ustedes</p>
-        <button class="hero-cta">VER MÁS</button>
+    <section class="section-hero">
+      <div class="hero">
+        <div class="cell-1">
+          <p class="hero-uppertext">DI STRADA 2025</p>
+          <p class="hero-text">Tenemos una nueva colección para ustedes</p>
+          <button class="hero-cta">VER MÁS</button>
+        </div>
+        <img
+          class="hero-img"
+          src="{% static 'img/hero-martos.png' %}"
+          data-martos="{% static 'img/hero-martos.png' %}"
+          data-lucas="{% static 'img/hero-lucas.png' %}"
+          alt="man wearing a shirt"
+        />
       </div>
-      <img class="hero-img" src="{% static 'img/hero-martos.png' %}" alt="man wearing a shirt" />
-    </div>
-  </section>
+    </section>
 
-  <!-- ||||||||||||||||||| IDEA 1 ||||||||||||||||||| -->
-  <!-- CADA BOTÓN CON UNA IMAGEN DE UNA COLECCIÓN (LOGO DE ESTA) -->
-  <div class="idea0">
-    <button class="change-style-btn">01</button>
-    <button class="change-style-btn">02</button>
-    <button class="change-style-btn">03</button>
-  </div>
-
-  <!-- ||||||||||||||||||| COLLECTION 1 ||||||||||||||||||| -->
-  <section class="section-collection">
-    <div class="collection">
-      <div class="cell-1">
-        <p class="col-uppertext">COLECCIÓN SR</p>
-        <p class="col-text">Conoce a nuestros modelos</p>
-        <button class="col-cta">VER MÁS</button>
-      </div>
-
-      <div class="cell-img cell-img-izq">
-        <img class="col-img" src="{% static 'img/manuel-1.jpg' %}" />
-      </div>
-
-      <div class="cell-img">
-        <img class="col-img" src="{% static 'img/martos-1.jpg' %}" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ||||||||||||||||||| IDEA 1 ||||||||||||||||||| -->
-  <div class="idea1">
-    <h1> 15% descuento en efectivo /// Recibimos transferencias /// 15% descuento en invierno </h1>
-  </div>
-
-  <!-- ||||||||||||||||||| PRODUCTS ||||||||||||||||||| -->
-  <section class="slide-container swiper">
-    <!-- ||||||||||||||||||| PRODUCTOS_MODAL ||||||||||||||||||| -->
-    {% include 'product_card.html' %}
-    <div class="product-header">
-      <a href="#" class="product-link">Productos</a>
-      <a href="/products/" class="product-link">Ver todos</a>
+    <!-- ||||||||||||||||||| IDEA 1 ||||||||||||||||||| -->
+    <!-- CADA BOTÓN CON UNA IMAGEN DE UNA COLECCIÓN (LOGO DE ESTA) -->
+    <div class="idea0">
+      <button class="change-style-btn">
+        <img class="change-style-icon" src="{% static 'img/star-icon.png' %}" />
+      </button>
+      <button class="change-style-btn">
+        <img class="change-style-icon" src="{% static 'img/baby-icon.png' %}" />
+      </button>
+      <button class="change-style-btn">
+        <img class="change-style-icon" src="{% static 'img/sr-icon.png' %}" />
+      </button>
     </div>
 
-    <!-- SLIDE SECTION -->
-    <div class="slide-content">
-      <div class="card-wrapper swiper-wrapper">
-        {% for producto in productos %}
+    <!-- ||||||||||||||||||| COLLECTION 1 ||||||||||||||||||| -->
+    <section class="section-collection">
+      <div class="collection">
+        <div class="cell-1">
+          <p class="col-uppertext">COLECCIÓN SR</p>
+          <p class="col-text">Conoce a nuestros modelos</p>
+          <button class="col-cta">VER MÁS</button>
+        </div>
 
-        <!-- INICIO SLIDES-->
-        <!-- DEBE HABER AL MENOS 6 PRODUCTOS EN LA BD-->
-        <article class="card swiper-slide">
-          <!-- CONTAINER MOVIBLE-->
-          <div class="image-content">
-            <span class="overlay"></span>
-            <div class="card-image">
-              <img class="card-img" src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" />
+        <div class="cell-img cell-img-izq">
+          <img class="col-img" src="{% static 'img/manuel-1.jpg' %}" />
+        </div>
+
+        <div class="cell-img">
+          <img class="col-img" src="{% static 'img/martos-1.jpg' %}" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ||||||||||||||||||| IDEA 1 ||||||||||||||||||| -->
+    <div class="idea1">
+      <h1>
+        15% descuento en efectivo /// Recibimos transferencias /// 15% descuento
+        en invierno
+      </h1>
+    </div>
+
+    <!-- ||||||||||||||||||| PRODUCTS ||||||||||||||||||| -->
+    <section class="slide-container swiper">
+      <!-- ||||||||||||||||||| PRODUCTOS_MODAL ||||||||||||||||||| -->
+      {% include 'product_card.html' %}
+      <div class="product-header">
+        <a href="#" class="product-link">Productos</a>
+        <a href="/products/" class="product-link">Ver todos</a>
+      </div>
+
+      <!-- SLIDE SECTION -->
+      <div class="slide-content">
+        <div class="card-wrapper swiper-wrapper">
+          {% for producto in productos %}
+
+          <!-- INICIO SLIDES-->
+          <!-- DEBE HABER AL MENOS 6 PRODUCTOS EN LA BD-->
+          <article class="card swiper-slide">
+            <!-- CONTAINER MOVIBLE-->
+            <div class="image-content">
+              <span class="overlay"></span>
+              <div class="card-image">
+                <img
+                  class="card-img"
+                  src="{{ producto.imagen.url }}"
+                  alt="{{ producto.nombre }}"
+                />
+              </div>
             </div>
-          </div>
-          <div class="card-content">
-            <a href="#" class="name">{{ producto.nombre }}</a>
-            <p class="description">{{ producto.precio }}</p>
-          </div>
-        </article>
-        <!-- FIN CONTAINER MOVIBLE-->
+            <div class="card-content">
+              <a href="#" class="name">{{ producto.nombre }}</a>
+              <p class="description">{{ producto.precio }}</p>
+            </div>
+          </article>
+          <!-- FIN CONTAINER MOVIBLE-->
 
-        {% empty %}
-        <p>NO HAY PRODUCTOS DISPONIBLES</p>
-        {% endfor %}
+          {% empty %}
+          <p>NO HAY PRODUCTOS DISPONIBLES</p>
+          {% endfor %}
 
-        <!--  FIN SLIDES -->
+          <!--  FIN SLIDES -->
+        </div>
       </div>
-    </div>
-    <!-- FIN SLIDE SECTION-->
+      <!-- FIN SLIDE SECTION-->
 
-    <div class="swiper-button-next swiper-NavBtn"></div>
-    <div class="swiper-button-prev swiper-NavBtn"></div>
-    <div class="swiper-container">
-      <div class="swiper-pagination"></div>
-    </div>
-  </section>
+      <div class="swiper-button-next swiper-NavBtn"></div>
+      <div class="swiper-button-prev swiper-NavBtn"></div>
+      <div class="swiper-container">
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
 
-  <!-- ||||||||||||||||||| FOOTER ||||||||||||||||||| -->
-  {% include 'foot.html' %}
+    <!-- ||||||||||||||||||| FOOTER ||||||||||||||||||| -->
+    {% include 'foot.html' %}
 
-  <script src="{% static 'js/script_general.js' %}"></script>
-  <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
-  <script src="{% static 'js/script_index.js' %}"></script>
-</body>
+    <script src="{% static 'js/script_general.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/script_index.js' %}"></script>
+  </body>
 
-<!-- Swiper JS -->
-
+  <!-- Swiper JS -->
 </html>
