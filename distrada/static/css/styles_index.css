@@ -1,7 +1,11 @@
 /* FONT SIZE SYSTEM: 10-12-14-16-18-20-24-30-36-44-52-62-74-86-98*/
 /* ||||||||||||||||||| HERO ||||||||||||||||||| */
 .section-hero {
-  background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
+  /* background */
+
+  background-image: url("/static/img/hero-skatepark.png");
+  background-size: cover;
+
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   justify-items: center;
   /* padding: 4.8rem 0; */
@@ -20,7 +24,12 @@
 
 /* ||| CELL 1 ||| */
 .cell-1 {
-  padding: 0 1rem;
+  justify-self: center;
+  background-color: rgb(241, 241, 241, 0.7);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  padding: 3rem;
+  width: 40rem;
+  border-radius: 6px;
 }
 
 .hero-uppertext {
@@ -88,10 +97,12 @@
 
 /* ||||||||||||||||||| SECTION COLLECTION ||||||||||||||||||| */
 .section-collection {
+  /* background */
   background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
+
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   justify-items: center;
-  margin: 16rem 4.8rem 0 4.8rem;
+  margin: 16rem 4.8rem 3rem 4.8rem;
 }
 
 /* .cell-1 {
@@ -167,7 +178,6 @@
 
 /* ||||||||||||||||||| IDEA 1 ||||||||||||||||||| */
 .idea1 {
-  margin-top: 3rem;
   background-image: linear-gradient(rgb(255, 255, 255), #f1f1f1);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   justify-items: center;

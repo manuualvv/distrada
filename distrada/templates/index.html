@@ -26,8 +26,12 @@
     {% include 'nav.html' %}
 
     <!-- ||||||||||||||||||| HERO ||||||||||||||||||| -->
-
-    <section class="section-hero">
+    <section
+      class="section-hero"
+      data-skatepark="{% static 'img/hero-skatepark.png' %}"
+      data-buildings="{% static 'img/hero-buildings.png' %}"
+      data-change="{% static 'img/hero-change.png' %}"
+    >
       <div class="hero">
         <div class="cell-1">
           <p class="hero-uppertext">DI STRADA 2025</p>
@@ -46,7 +50,6 @@
     </section>
 
     <!-- ||||||||||||||||||| IDEA 1 ||||||||||||||||||| -->
-    <!-- CADA BOTÓN CON UNA IMAGEN DE UNA COLECCIÓN (LOGO DE ESTA) -->
     <div class="idea0">
       <button class="change-style-btn btn--1">
         <img class="change-style-icon" src="{% static 'img/star-icon.png' %}" />

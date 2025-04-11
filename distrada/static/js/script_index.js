@@ -75,21 +75,15 @@ document.addEventListener("DOMContentLoaded", function () {
   changeStyleBtns.forEach((btn) => {
     btn.addEventListener("click", function () {
       if (btn.classList.contains("btn--1")) {
-        console.log("DEBUG BOTON 1");
-        heroSection.style.backgroundImage =
-          "linear-gradient( #f1f1f1, rgb(107, 30, 30))";
         heroText1.textContent = "Colección de remeras SR"; // PROBANDO
+        heroSection.style.backgroundImage = `url(${heroSection.dataset.buildings})`;
         heroImg.src = heroImg.dataset.lucas;
       } else if (btn.classList.contains("btn--2")) {
-        console.log("DEBUG BOTON 2");
-        heroSection.style.backgroundImage =
-          "linear-gradient(rgb(123, 165, 241), #356d9b)";
         heroText1.textContent = "Colección de remeras SR"; // PROBANDO
+        heroSection.style.backgroundImage = `url(${heroSection.dataset.change})`;
         heroImg.src = heroImg.dataset.manu;
       } else {
-        console.log("DEBUG BOTON 3");
-        heroSection.style.backgroundImage =
-          "linear-gradient(rgb(255, 255, 255), #f1f1f1)";
+        heroSection.style.backgroundImage = `url(${heroSection.dataset.skatepark})`;
         heroText1.textContent = "Tenemos una nueva colección para ustedes"; // PROBANDO
         heroImg.src = "{% static 'img/hero-martos.png' %}";
         heroImg.src = heroImg.dataset.martos;
