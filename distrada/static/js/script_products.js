@@ -55,28 +55,3 @@ document.addEventListener("DOMContentLoaded", function () {
     ascending = !ascending;
   });
 });
-
-// CERRAR VENTANA MODAL
-document.addEventListener("DOMContentLoaded", function () {
-  // SELECCIÓN DE ITEMS
-  const productCard = document.querySelector(".product_card");
-  const productCloseBtn = document.querySelector(".product_closebtn");
-  const productos = document.querySelectorAll(".producto");
-  const overlayModal = document.querySelector(".overlay_modal");
-
-  // ITERACIÓN EN CADA PRODUCTO
-  productos.forEach((producto) => {
-    producto.addEventListener("click", function () {
-      productCard.classList.remove("hidden");
-      overlayModal.classList.remove("hidden");
-    });
-  });
-
-  // OCULTAR MODAL
-  const hideModal = function () {
-    productCard.classList.add("hidden");
-    overlayModal.classList.add("hidden");
-  };
-  productCloseBtn.addEventListener("click", hideModal);
-  overlayModal.addEventListener("click", hideModal);
-});

@@ -246,7 +246,7 @@
   padding: 2.5rem 0;
 }
 
-.overlay {
+.overlay-swiper-card {
   position: absolute;
   /* left: 0; */
   top: 0;
@@ -256,9 +256,9 @@
   border-radius: 25px 25px 0 25px;
 }
 
-.overlay::before,
+.overlay-swiper-card::before,
 /* ESQUINA DERECHA CURVA DEL SLIDE */
-.overlay::after {
+.overlay-swiper-card::after {
   content: "";
   position: absolute;
   right: 0;
@@ -268,7 +268,7 @@
   background-color: rgb(255, 255, 255);
 }
 
-.overlay::after {
+.overlay-swiper-card::after {
   border-radius: 0 25px 0 0;
   background-color: #333;
 }

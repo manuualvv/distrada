@@ -1,4 +1,4 @@
-{% load static %}
+{% load static %} {% for producto in productos %}
 <article class="product_card hidden">
   <button class="product_closebtn">&times;</button>
   <div class="product_img">
@@ -20,6 +20,15 @@
       <button class="product_btn">M</button>
       <button class="product_btn">L</button>
     </div>
-    <button class="product_cta">AÑADIR AL CARRITO</button>
+    <button
+      data-product="{{producto.id}}"
+      data-action="add"
+      class="product_cta btn_atc btn-outline-secondary add-btn update-cart"
+    >
+      AÑADIR AL CARRITO
+    </button>
   </div>
 </article>
+{% empty %}
+<p>NO HAY PRODUCTOS DISPONIBLES</p>
+{% endfor %}

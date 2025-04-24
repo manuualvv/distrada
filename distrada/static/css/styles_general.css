@@ -211,7 +211,7 @@ header {
   display: none;
 }
 
-.overlay_modal {
+.overlay {
   background-color: (0, 0, 0, 0.3);
   backdrop-filter: blur(3px);
   position: absolute;
@@ -223,7 +223,7 @@ header {
   z-index: 10;
 }
 
-.overlay_modal.hidden {
+.overlay.hidden {
   display: none;
 }
 

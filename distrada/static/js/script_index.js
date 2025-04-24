@@ -45,26 +45,6 @@ var swiper = new Swiper(".slide-content", {
 // hiddenElements.forEach((el) => observer.observe(el));
 
 document.addEventListener("DOMContentLoaded", function () {
-  // ||| MODAL_SLIDER ||| SELECCIÓN DE ITEMS
-  const productCard = document.querySelector(".product_card");
-  const productCloseBtn = document.querySelector(".product_closebtn");
-  const container_products = document.querySelectorAll(".card");
-  const overlay = document.querySelector(".overlay");
-
-  // ||| MODAL_SLIDER ||| ITERACIÓN EN CADA PRODUCTO
-  container_products.forEach((card) => {
-    card.addEventListener("click", function () {
-      productCard.classList.toggle("hidden");
-      overlay.classList.toggle("hidden");
-    });
-  });
-
-  // ||| MODAL_SLIDER ||| CERRAR CON BOTON X
-  productCloseBtn.addEventListener("click", function () {
-    productCard.classList.toggle("hidden");
-    overlay.classList.toggle("hidden");
-  });
-
   // ||| CHANGE_STYLE ||| SELECCIÓN DE ITEMS
   const changeStyleBtns = document.querySelectorAll(".change-style-btn");
   const heroSection = document.querySelector(".section-hero"); // PROBANDO
