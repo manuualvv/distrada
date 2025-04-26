@@ -26,6 +26,7 @@ urlpatterns = [
     path('products/', views.lista_productos, name='productos'),
     path('products/partial/', views.lista_productos_grid, name='lista_productos_grid'),  # Solo el fragmento
     path('help/', views.help, name='help'),
+    path('update_item/', views.updateItem, name='update_item'),
 ]
 
 

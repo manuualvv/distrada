@@ -45,12 +45,33 @@ document.addEventListener("DOMContentLoaded", function () {
     var productId = this.dataset.product;
     var action = this.dataset.action;
     console.log("id:", productId, "action:", action);
+    console.log("USER:", user);
+    if (user === "AnonymousUser") {
+      console.log("User is not logged in.");
+    } else {
+      updateUserOrder(productId, action);
+    }
   });
-  //   for (var i = 0; i < updateBtns.lenght; i++) {
-  //     updateBtns[i].addEventListener("click", function () {
-  //       var productId = this.dataset.product;
-  //       var action = this.dataset.action;
-  //       console.log("id:", productId, "action:", action);
-  //     });
-  //   }
+
+  const updateUserOrder = function (productId, action) {
+    console.log("User is logged in. Sending data...");
+    var url = "update_item/"; // url donde se manda la data
+    fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        productId: productId,
+        action: action,
+      }),
+    })
+      .then((response) => {
+        return response.json();
+      })
+
+      .then((data) => {
+        console.log("data:", data);
+      });
+  };
 });

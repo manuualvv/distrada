@@ -1,6 +1,7 @@
 import os
 from django.shortcuts import render, get_object_or_404
 from django.conf import settings
+from django.http import JsonResponse
 from .models import Producto
 
 
@@ -26,7 +27,8 @@ def lista_productos_grid(request):
 def help(request):
     return render(request, 'help.html')
     
-    
+def updateItem(request):
+    return JsonResponse('Item was added.', safe=False)
    
 
 
