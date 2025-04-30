@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // CART
+  ////////// TOGGLE CART //////////
   const cartModal = document.querySelector(".cart-modal");
   const cartBtn = document.querySelector(".carro");
 
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (event.code === "Escape") cartModal.classList.add("hidden");
   });
 
-  //   TOGGLE MODAL CARD
+  ////////// TOGGLE MODAL CARD //////////
   const productCard = document.querySelector(".product_card");
   const productCloseBtn = document.querySelector(".product_closebtn");
   const container_products = document.querySelectorAll(".card");
@@ -39,20 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
   //   CERRAR CLICKEANDO FUERA
   overlay.addEventListener("click", hideModal);
 
-  //   CART EVENTS
-  const updateBtn = document.querySelector(".update-cart"); // BOTON AÑADIR CARRITO DE MODAL
-  updateBtn.addEventListener("click", function () {
-    var productId = this.dataset.product;
-    var action = this.dataset.action;
-    console.log("id:", productId, "action:", action);
-    console.log("USER:", user);
-    if (user === "AnonymousUser") {
-      console.log("User is not logged in.");
-    } else {
-      updateUserOrder(productId, action);
-    }
-  });
-
+  ////////// CART EVENTS //////////
   const updateUserOrder = function (productId, action) {
     console.log("User is logged in. Sending data...");
     var url = "update_item/"; // url donde se manda la data
@@ -60,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        "X-CSRFToken": csrftoken,
       },
       body: JSON.stringify({
         productId: productId,
@@ -74,4 +62,17 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("data:", data);
       });
   };
+
+  const updateBtn = document.querySelector(".update-cart"); // BOTON AÑADIR CARRITO DE MODAL
+  updateBtn.addEventListener("click", function () {
+    var productId = this.dataset.product;
+    var action = this.dataset.action;
+    console.log("id:", productId, "action:", action);
+    console.log("USER:", user);
+    if (user === "AnonymousUser") {
+      console.log("User is not logged in.");
+    } else {
+      updateUserOrder(productId, action);
+    }
+  });
 });
