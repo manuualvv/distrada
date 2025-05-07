@@ -35,9 +35,13 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // CERRAR CON X
-  productCloseBtn.addEventListener("click", hideModal);
+  if (productCloseBtn) {
+    productCloseBtn.addEventListener("click", hideModal);
+  }
   //   CERRAR CLICKEANDO FUERA
-  overlay.addEventListener("click", hideModal);
+  if (overlay) {
+    overlay.addEventListener("click", hideModal);
+  }
 
   ////////// CART EVENTS //////////
   const updateUserOrder = function (productId, action) {
@@ -64,15 +68,17 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const updateBtn = document.querySelector(".update-cart"); // BOTON AÑADIR CARRITO DE MODAL
-  updateBtn.addEventListener("click", function () {
-    var productId = this.dataset.product;
-    var action = this.dataset.action;
-    console.log("id:", productId, "action:", action);
-    console.log("USER:", user);
-    if (user === "AnonymousUser") {
-      console.log("User is not logged in.");
-    } else {
-      updateUserOrder(productId, action);
-    }
-  });
+  if (updateBtn) {
+    updateBtn.addEventListener("click", function () {
+      var productId = this.dataset.product;
+      var action = this.dataset.action;
+      console.log("id:", productId, "action:", action);
+      console.log("USER:", user);
+      if (user === "AnonymousUser") {
+        console.log("User is not logged in.");
+      } else {
+        updateUserOrder(productId, action);
+      }
+    });
+  }
 });

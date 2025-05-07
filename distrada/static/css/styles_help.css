@@ -11,8 +11,55 @@
 
 .celda-1 {
   background-color: rgb(189, 122, 122);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.mapa-ej {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .celda-2 {
   background-color: rgb(93, 163, 93);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.faq-container {
+  background-color: blue;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.faq {
+  background-color: yellowgreen;
+  width: 100%;
+  height: auto;
+}
+
+.faq-title {
+  background-color: green;
+  cursor: pointer;
+}
+
+.faq-collapsible {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.1s ease-out, opacity 0.3s ease-out;
+}
+
+.faq-collapsible.faq-open {
+  opacity: 1;
+  align-content: center;
+  background-color: white;
+  height: 2.4rem;
+  max-height: 2.4rem;
+  top: 0;
 }
