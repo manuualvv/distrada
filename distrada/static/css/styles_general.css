@@ -115,12 +115,6 @@ header {
   height: auto;
 }
 
-.foot-credits {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
 /* ||||||||||||||||||| CART ||||||||||||||||||| */
 .cart-modal.hidden {
   display: none;

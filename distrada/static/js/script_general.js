@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ////////// CART EVENTS //////////
   const updateUserOrder = function (productId, action) {
     console.log("User is logged in. Sending data...");
-    var url = "update_item/"; // url donde se manda la data
+    var url = "/update_item/"; // url donde se manda la data
     fetch(url, {
       method: "POST",
       headers: {
@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log("USER:", user);
       if (user === "AnonymousUser") {
         console.log("User is not logged in.");
+        console.log("¡¡¡ESTO AFECTA LA ACTIVACIÓN DEL FETCH!!!");
       } else {
         updateUserOrder(productId, action);
       }
