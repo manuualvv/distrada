@@ -11,6 +11,20 @@ class Producto(models.Model):
 
     def __str__(self):
         return self.nombre
+    
+    @property
+    def imageURL(self):
+        if not self.imagen or not getattr(self.imagen, 'name', None):
+            return ''
+        try:
+            return self.imagen.url
+        except ValueError:
+            return ''
+        # try:
+        #     url = self.image.url
+        # except:
+        #     url = ''
+        # return url
 
 class Customer(models.Model): 
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)

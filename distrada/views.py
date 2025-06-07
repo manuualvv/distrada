@@ -2,20 +2,19 @@ import os
 from django.shortcuts import render, get_object_or_404
 from django.conf import settings
 from django.http import JsonResponse
-from .models import Producto
+from .models import *
 import json
 
 
 def index(request):
-    context = {}
     productos = Producto.objects.all()
-    return render(request, 'index.html', {'productos': productos})
+    return render(request, 'index.html', {'productos':productos})
+    # return render(request, 'index.html', {'productos': productos})
 
 
 def lista_productos(request):
-    context = {}
     productos = Producto.objects.all()
-    return render(request, 'products.html', {'productos': productos})
+    return render(request, 'products.html', {'productos':productos})
 
 
 def lista_productos_grid(request):
@@ -25,10 +24,9 @@ def lista_productos_grid(request):
     else:
         productos = Producto.objects.all().order_by('-precio')
         
-    return render(request, 'products_list.html', {'productos': productos})
+    return render(request, 'products_list.html', {'productos':productos})
 
 def help(request):
-    context = {}
     return render(request, 'help.html')
     
 def updateItem(request):
