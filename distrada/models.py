@@ -20,11 +20,6 @@ class Producto(models.Model):
             return self.imagen.url
         except ValueError:
             return ''
-        # try:
-        #     url = self.image.url
-        # except:
-        #     url = ''
-        # return url
 
 class Customer(models.Model): 
     user = models.OneToOneField(User, null=True, blank=True, on_delete=models.CASCADE)
