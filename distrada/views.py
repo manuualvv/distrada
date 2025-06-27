@@ -13,8 +13,9 @@ def index(request):
         items = order.orderitem_set.all()
     else:
         items = []
+        order = {'get_cart_total': 0, 'get_cart_items': 0}
     productos = Producto.objects.all()
-    return render(request, 'index.html', {'productos':productos, 'items':items})
+    return render(request, 'index.html', {'productos':productos, 'items':items, 'order':order})
     # return render(request, 'index.html', {'productos': productos})
 
 

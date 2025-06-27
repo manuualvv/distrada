@@ -38,12 +38,30 @@ class Order(models.Model): #aparentemente child del customer?
 
     def __str__(self):
         return str(self.id)
+    
+    @property
+    def get_cart_total(self): # Calculo el total del carrito
+        orderitems = self.orderitem_set.all()
+        total = sum([item.get_total for item in orderitems])
+        return total
+    
+    @property # Total de items en el carrito
+    def get_cart_items(self):
+        orderitems = self.orderitem_set.all()
+        total = sum([item.quantity for item in orderitems])
+        return total
 
 class OrderItem(models.Model): #child de un order
     product = models.ForeignKey(Producto, on_delete=models.SET_NULL, null= True)
     order = models.ForeignKey(Order, on_delete=models.SET_NULL, null=True)
     quantity = models.IntegerField(default=0, null=True, blank=True)
     date_added = models.DateTimeField(auto_now_add=True)
+
+    @property
+    def get_total(self): # Calculo el total del producto
+        # accedo al precio desde product, y a la cantidad de la misma orden
+        total = self.product.precio * self.quantity
+        return total
 
 class ShippingAdress(models.Model):
     customer = models.ForeignKey(Customer, on_delete=models.SET_NULL, null=True)
